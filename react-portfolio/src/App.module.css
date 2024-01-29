@@ -1,0 +1,9 @@
+/* on importe le fichier vars dans lequel se trouve  toutes nos variables */
+@import "./vars.css";
+
+.App{
+    background-color: var(--color-bg);
+    width: 100%; 
+    height: 100%; /*si on écrit 100vh  le composant App sera égale à 100% de la hauteur de la fenêtre (écran)indépendaùùant de son conteneur parent */
+
+}

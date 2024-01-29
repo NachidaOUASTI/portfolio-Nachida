@@ -1,0 +1,14 @@
+/* Pour définir kes variables personnalisées au niveau global on utilise :root
+Le code sera plus facile à maintenir en cas de modifications
+ces variables pourront être utilisées dans d'autres parties des feuilles de styles */
+:root {
+    /* Colours */
+    --color-text: #fff;
+    --color-primary: #576cbc;
+    --color-secondary: #19376d;
+    --color-dark: #0b2447;
+    --color-bg: #04152d;
+  
+    /* Fonts */
+    --font-roboto: "Roboto";
+  }

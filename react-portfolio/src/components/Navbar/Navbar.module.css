@@ -1,0 +1,87 @@
+/* on  importe les  variables */
+@import "../../vars.css";
+
+
+
+.navbar {
+    position: relative;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    padding-top:61px;
+    z-index:2; /*ordre d'affichage par rapport aux autres éléments(plus la valeur est élevée plus elle apparaitra au dessus des autres) */
+    margin:0 10%;
+}
+
+.title {
+    font-size : 30px;
+    font-weight:600;
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.menu{
+    display:flex;
+
+}
+
+.menuItems{    
+    display:flex;
+    gap:47px;
+    list-style:none;
+}
+
+.menuItems a {
+    font-size:25px;
+    color: var(--color-text);
+    text-decoration : none
+}
+
+/* On veut rendre le site responsive, on ajoute @media queries*/
+
+@media screen and (max-width: 830px){
+    .navbar{
+        flex-direction: column; /* ça permet d'afficher les élément en colonne quand la lageur est inférieure à 830px (pour tel par exemple) */
+        align-items: flex-start;
+    }
+
+    .menu {
+        position: absolute; /* permet de poistionner le menu de façon indépendante des autres éléments*/
+        right: 0; /* Aligne le côté droit du .menu avec le côté droit du parent */
+        margin-right: 10%; 
+        flex-direction: column; /* Dispose les éléments en colonne plutôt qu'en ligne */
+        align-items: flex-end; /* Aligner les éléments à droite à l'intérieur du conteneur flex */
+        gap: 11px; /* espace vertical de 11px entre chaque élément */
+        z-index: 3; /* Définit l'ordre d'affichage par rapport aux autres éléments (plus la valeur est élevée, plus elle apparaîtra au-dessus des autres) */
+    }
+
+    .menuBtn{
+        display: block;
+        cursor:pointer;
+    
+    }
+
+    .menuItems{
+        display:none; /* fait disparaître la liste de menu */
+        flex-direction: column;
+        align-items: center; /* centre les elements enfants */
+        gap:13px;/* espace vertical les elements enfants */
+        border-radius: 10px;
+        background: rgb(25, 55, 109);
+        background: linear-gradient(0deg,rgb(25, 55, 109, 0.2) 0%,rgb(25, 55, 109,100%) );/* Dégradé linéaire horizontal opacité de 0.2 au début(0%) et de 100% à la fin(100%)/
+        padding :24px 33px;
+        box-shadow: 0 0 4px 0 rgb(0, 0,0,0.25);/* Ajouter une ombre à la boîte (4px de flou, couleur noire avec 25% d'opacité) */
+        padding:24px 33px;
+        box-shadow:0 0 4px 0 (0 ,0,0,0.25);
+    }
+
+    .menuOpen{
+        display:flex; /* rend visible la liste modifie diplay none en flex  menuOpen prend le dessus , la classe .menuOpen a la priorité sur la propriété display, et son effet de display: flex; va annuler l'effet de display: none; de la classe .menuItems.*/
+        z-index:1;
+    }
+
+
+
+}
+    
+
