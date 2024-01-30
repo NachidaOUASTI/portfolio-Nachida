@@ -7,10 +7,13 @@ import { getImageUrl } from "../../utils";
 
 export default function About() {
   return (
-   <section className={styles.container}>
+    /* id="about" permet de se direger vers le href=#about qu'on retrouve dans navbar.jsx l23 */
+    <section className={styles.container} id="about">
           <h2 className={styles.title}>About</h2>
-          <div><img src={getImageUrl("about/aboutImage.png")}
-          alt="Moi assise avec un ordinateur" className={styles.aboutImage}/>
+      <div className={styles.content}>
+        <img src={getImageUrl("about/aboutImage.png")}
+          alt="Moi assise avec un ordinateur" className={styles.aboutImage
+          } />
               <ul className={styles.aboutItems}>
                   <li className={styles.aboutItem}>
                       <img src={getImageUrl("about/cursorIcon.png")}
@@ -24,17 +27,16 @@ export default function About() {
                   <li className={styles.aboutItem}>
                       <img src={getImageUrl("about/serverIcon.png")}
                         alt="Icone serveur" />
-                      <div className={styles.aboutItem}>
+                      <div className={styles.aboutItemText}>
                           <h3>Backend Developer</h3>
-                          <p>
-                            PostgreSql and API
-                          </p>                        
+              <p>PostgreSql and API </p>     
+              
                      </div>
                   </li>
                   <li className={styles.aboutItem}>
                       <img src={getImageUrl("about/cursorIcon.png")}
                      alt="Icone curseur" />
-                      <div>
+                      <div className={styles.aboutItemText}>
                           <h3>UI Designer</h3>
                           <p>
                           I&apos;m a frontend developer usin React and NodeJs.
@@ -42,7 +44,7 @@ export default function About() {
                     </div>
                   </li>
             </ul>
-          </div>
+     </div>
    </section>
   );
 }

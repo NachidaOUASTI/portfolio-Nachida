@@ -6,5 +6,5 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* permet de faire glisser vers le bas avec un joli mouvement quand on scroll , html car s'applique au conteneur racine de la page*/
 }

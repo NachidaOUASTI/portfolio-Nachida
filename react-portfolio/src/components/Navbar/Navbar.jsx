@@ -21,6 +21,7 @@ const[menuOpen, setMenuOpen]=useState(false)
          {/*   conditional rendering sur la variable d'état menuOpen : si menuOpen true on ajoute la className styles.menuOpen en plus de la classe déjà présente styles.menuItems . De plus, quand on clique sur un des element de la liste le menu se ferme */}
           <li>
             <a href="#about">À propos</a>
+          {/* #about va permettre de rediriger vers le composant about (ou on a ajouté un id="about"quand on clique dessus  */}
           </li>
           <li>
             <a href="#experience">Expériences</a>

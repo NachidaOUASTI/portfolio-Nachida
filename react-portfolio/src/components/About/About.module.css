@@ -1,1 +1,92 @@
 @import "../../vars.css";
+
+.container{
+    position:relative;
+    background-color: rgba(12,12,12,0.6);
+    border-radius:15px;
+    padding:73px;
+    margin-top:129px;
+    z-index:1;
+    margin-left: 10%;
+    margin-right:10%;
+}
+
+.title{
+color:var(--color-text);
+font-size:35px;
+font-weight:700;
+letter-spacing:1.75px;
+text-transform: uppercase;
+
+}
+
+.content{
+    display:flex;
+    flex-direction:row ;
+    align-items: center;
+}
+
+.aboutImage{
+    width: 35%;
+}
+
+.aboutItems{
+    color : var(--color-text);
+    display:flex;
+    flex-direction: column;
+    gap:50px;
+}
+
+.aboutItem{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 20px;
+    list-style:none; /* supprime les points de la liste li */
+    padding: 25px;
+    background-image: linear-gradient(90deg,rgba(165,215,232,0.42)0%, rgba(255,255,255,0)100%);/* Angle du dégradé, 90deg pour un dégradé horizontal / Couleur du début du dégradé avec une opacité de 0.42 cette couleur commence au début du dégradé (0% de progression) /Couleur de fin du dégradé avec une opacité de 0 (couleur est complètement transparente) couleur final est atteinte a la fin du dégradé (100% progression) */
+    background-size:0 100%; /* quand on ajoute ce code le backgroud image avec degradé n apparait plus :  l'image de fond est étirée verticalement pour remplir entièrement la hauteur de l'élément, tandis que sa largeur est réduite à zéro, la rendant invisible horizontalement */
+    background-repeat: no-repeat;  /* Empêche la répétition de l'image de fond dans les deux directions (ni horizontalement, ni verticalement) */
+    transition : 0.4s;/* Définit la transition pour une animation en douceur lorsqu'il y a des changements */
+}
+
+.aboutItem:hover{
+    background-size: 100% 100%;/* Modifie la taille de l'image de fond (implémentée ligne 47) de l'élément à 100% de la largeur et 100% de la hauteur lorsqu'il est survolé */
+    cursor: pointer;
+}
+
+.aboutItem h3{
+    font-size: 25px;
+    font-weight:600;
+}
+
+.aboutItem p {
+    font-size: 25px;
+}
+
+
+@media screen and (max-width : 830px){
+    .container{
+        background-color: transparent;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+
+    .content {
+        flex-direction: column;
+    }
+    
+    .aboutImage{
+        display:none;
+    }
+
+    .aboutItems{
+        margin-top:29px
+    }
+
+    .aboutItem{
+        padding-left:0;
+        padding-right:0;
+    }
+}
